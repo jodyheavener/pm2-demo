@@ -1,0 +1,25 @@
+{
+  "name": "pm2-demo",
+  "version": "0.1.0",
+  "description": "An example PM2 setup",
+  "private": true,
+  "homepage": "https://github.com/jodyheavener/pm2-demo",
+  "repository": "https://github.com/jodyheavener/pm2-demo.git",
+  "author": "Jody Heavener <j.heavener@gmail.com>",
+  "license": "MPL-2.0",
+  "engines": {
+    "node": "^14.15.1"
+  },
+  "scripts": {
+    "restart": "pm2 restart all",
+    "start": "pm2 start pm2.config.js && yarn workspaces --verbose run start && pm2 ls",
+    "stop": "pm2 kill"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "pm2": "^4.5.6",
+    "pm2-ws": "^0.2.3"
+  }
+}

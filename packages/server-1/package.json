@@ -1,0 +1,20 @@
+{
+  "name": "server-1",
+  "version": "0.1.0",
+  "description": "An example PM2-controlled server",
+  "private": true,
+  "homepage": "https://github.com/jodyheavener/pm2-demo",
+  "repository": "https://github.com/jodyheavener/pm2-demo.git",
+  "author": "Jody Heavener <j.heavener@gmail.com>",
+  "license": "MPL-2.0",
+  "engines": {
+    "node": "^14.15.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start pm2.config.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
